@@ -1,0 +1,41 @@
+.info-block-button,
+.gallery-button {
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #034e4e;
+    border: 1px solid #034e4e;
+    border-bottom: 4px solid #034e4e;
+    border-radius: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#96cece));
+    background: gradient(top,  #dee5e6,  #96cece);
+    box-shadow: inset 1px 1px 0 #034e4e;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.gallery-button {
+    position: absolute;
+    width: 80%;
+    height: 200px;
+    border: 1px solid #487fe3;
+    border-bottom: 4px solid #487fe3;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 0 #487fe3;
+    top: 15px;
+    right: 25px;
+}
+
+.info-block-button:hover,
+.gallery-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
+    background: gradient(top,  #96cece,  #dee5e6);
+}
+
+.info-block-button:active,
+.gallery-button:active {
+    border: none;
+    bottom: -4px;
+}

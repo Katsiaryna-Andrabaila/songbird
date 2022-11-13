@@ -11,7 +11,7 @@ export function getHeader(linkClass) {
     part1Logo.textContent = 'Song';
     part2Logo.textContent = 'bird';
 
-    const headerNav = header.appendChild(document.createElement('div'));
+    const headerNav = header.appendChild(document.createElement('nav'));
     headerNav.classList.add('header-nav');
 
     const headerLink = headerNav.appendChild(document.createElement('a'));

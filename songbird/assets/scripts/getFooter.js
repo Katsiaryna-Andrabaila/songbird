@@ -13,7 +13,7 @@ export function getFooter() {
     githubImg.src = '../../assets/icons/github.png';
     githubImg.alt = 'GitHub link';
 
-    const year = footer.appendChild(document.createElement('div'));
+    const year = footer.appendChild(document.createElement('p'));
     year.classList.add('year');
     year.classList.add('footer-item');
     year.textContent = '2022';
@@ -22,9 +22,10 @@ export function getFooter() {
     rss.classList.add('rss-link');
     rss.classList.add('footer-item');
     rss.href = 'https://rs.school/js/';
+    const newWord = document.createTextNode('\n');
+    rss.innerHTML = 'R  &nbsp&nbsp&nbsp&nbspS <br>SCHOOL';
     
-    const rssImg = rss.appendChild(document.createElement('img'));
-    rssImg.classList.add('rss-img');
-    rssImg.src = 'https://rs.school/images/rs_school_js.svg';
-    rssImg.alt = 'RSSchool link';
+    const rssJs = rss.appendChild(document.createElement('div'));
+    rssJs.classList.add('rss-js');
+    rssJs.textContent = 'JS';
 }

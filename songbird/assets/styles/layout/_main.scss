@@ -1,0 +1,63 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 90vh;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    background-color: #f0f8ff;
+    border: 6px solid;
+    border-image-source: url(../../assets/icons/border_green_feathers.png);
+    border-image-slice: 0 0 0 fill;
+    border-image-repeat: stretch;
+    border-image-width: auto;
+    border-image-outset: 130px;
+    border-radius: 30%;
+    margin-top: 150px;
+}
+
+.info-block-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: #034e4e;
+    text-align: center;
+    margin: 24px;
+}
+
+.gallery-button-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 20%;
+    height: 250px;
+}
+
+.gallery-button-border {
+    width: 100%;
+    height: 250px;
+    background: url(../../assets/icons/blue_flowers.png) center center no-repeat;
+    border: 2px solid transparent;
+}
+
+.gallery-button-border:hover,
+.gallery-button-block:hover .gallery-button-border {
+    animation: 5s linear 0s normal none infinite running circle;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
