@@ -214,6 +214,16 @@ body {
     transform: rotate(360deg);
   }
 }
+.main-game {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionCategory {
+  display: flex;
+  flex-direction: row;
+}
+
 .header {
   position: absolute;
   width: 100%;
