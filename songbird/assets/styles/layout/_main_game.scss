@@ -1,0 +1,130 @@
+.main-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 92%;
+    height: 100vh;
+    margin: 60px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #f0f8ff;
+}
+
+.score {
+    font-size: 24px;
+    text-align: right;
+    font-weight: 600;
+    color: #014675;
+    margin-right: 20px;
+}
+
+.question-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #0078c9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.category {
+    text-align: center;
+    font-weight: 300;
+    list-style: none;
+}
+
+.player-block {
+    display: flex;
+    width: 100%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: 10px 0;
+}
+
+.bird-shadow {
+    width: 200px;
+    background-color: #025389;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.player-block-right {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.bird-playing {
+    font-size: 26px;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+}
+
+.player-sound-bar-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    gap: 10px;
+}
+
+.sound-controls {
+    text-align: right;
+}
+
+.sound-bar {
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.player-bar {
+    width: 100%;
+}
+
+.player-timer {
+    font-size: 14px;
+}
+
+.answers-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 250px;
+}
+
+.answers,
+.variant {
+    width: 49.5%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    margin: 0;
+    border: 1px solid #f0f8ff;
+    padding: 0;
+}
+
+.answer {
+    width: 100%;
+    height: 16.67%;
+    border: 0.5px dotted #f0f8ff;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.answer-sign {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #025389;
+    margin: 15px;
+}
+
+.variant {
+    font-size: 16px;
+    padding: 10px;
+}

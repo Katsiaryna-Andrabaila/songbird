@@ -1,5 +1,6 @@
 .info-block-button,
-.gallery-button {
+.gallery-button,
+.next-button {
     width: 150px;
     height: 40px;
     text-decoration: none;
@@ -29,13 +30,42 @@
 }
 
 .info-block-button:hover,
-.gallery-button:hover {
+.gallery-button:hover,
+.next-button:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
     background: gradient(top,  #96cece,  #dee5e6);
 }
 
 .info-block-button:active,
-.gallery-button:active {
+.gallery-button:active,
+.next-button:active {
     border: none;
     bottom: -4px;
+}
+
+.next-button {
+    width: 100%;
+    border: 1px solid #0078c9;
+    border-bottom: 4px solid #0078c9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#0078c9));
+    background: gradient(top,  #dee5e6,  #0078c9);
+    box-shadow: inset 1px 1px 0 #0078c9;
+    color: #014675;
+}
+
+.player-button {
+    width: 64px;
+    height: 64px;
+    background: url(../../assets/icons/play.svg);
+    margin: 33px 20px 0 0;
+    cursor: pointer;
+}
+
+.sound-button {
+    width: 32px;
+    height: 32px;
+    background: url(../../assets/icons/sound-on-icon.svg);
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
 }
