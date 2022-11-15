@@ -1,3 +1,5 @@
+import { getPlayer } from "./getPlayer.js";
+
 export function getMainGame() {
     const main = document.querySelector('main');
     main.classList.add('main-game');
@@ -17,6 +19,8 @@ export function getMainGame() {
         questionCategory.childNodes[i].textContent = questions[i];
     }
 
+    questionCategory.childNodes[0].classList.add('active-category');
+
     const playerBlock = main.appendChild(document.createElement('div'));
     playerBlock.classList.add('player-block');
 
@@ -34,40 +38,7 @@ export function getMainGame() {
     const playerControls = playerBlockRight.appendChild(document.createElement('div'));
     playerControls.classList.add('controls');
 
-    const playerBtn = playerControls.appendChild(document.createElement('div'));
-    playerBtn.classList.add('player-button');
-
-    const playerSoundBarTimer = playerControls.appendChild(document.createElement('div'));
-    playerSoundBarTimer.classList.add('player-sound-bar-timer');
-
-    const soundControls = playerSoundBarTimer.appendChild(document.createElement('span'));
-    soundControls.classList.add('sound-controls');
-
-    const soundBtn = soundControls.appendChild(document.createElement('button'));
-    soundBtn.classList.add('sound-button');
-
-    const soundBar = soundControls.appendChild(document.createElement('input'));
-    soundBar.classList.add('sound-bar');
-    soundBar.type = 'range';
-    soundBar.min = '0';
-    soundBar.max = '1';
-    soundBar.step = '0.01';
-    soundBar.value = '1';
-
-    const playerBar = playerSoundBarTimer.appendChild(document.createElement('input'));
-    playerBar.classList.add('player-bar');
-    playerBar.type = 'range';
-    playerBar.value = '0';
-    playerBar.max = '';
-
-    const playerTimer = playerSoundBarTimer.appendChild(document.createElement('div'));
-    playerTimer.classList.add('player-timer');
-
-    const startTime = playerTimer.appendChild(document.createElement('span'))
-    startTime.textContent = '00:00';
-
-    const durationTime = playerTimer.appendChild(document.createElement('span'))
-    durationTime.textContent = '';
+    getPlayer(playerControls);
 
     const answersBlock = main.appendChild(document.createElement('div'));
     answersBlock.classList.add('answers-block');

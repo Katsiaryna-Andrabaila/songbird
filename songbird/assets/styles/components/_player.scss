@@ -1,0 +1,52 @@
+.controls {
+    display: flex;
+}
+
+.player-sound-bar-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    gap: 10px;
+}
+
+.sound-controls {
+    text-align: right;
+}
+
+.sound-bar,
+.player-bar {
+    -webkit-appearance: none;
+    border: 1px solid #025389;
+	height: 5px;
+    background-color: #025389;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sound-bar::-webkit-slider-thumb,
+.player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fc8719;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.sound-bar {
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.player-bar {
+    width: 100%;
+}
+
+.player-timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}

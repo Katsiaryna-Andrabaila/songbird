@@ -34,6 +34,11 @@
     list-style: none;
 }
 
+.active-category {
+    color: #fc8719;
+    font-weight: 600;
+}
+
 .player-block {
     display: flex;
     width: 100%;
@@ -59,35 +64,6 @@
 .bird-playing {
     font-size: 26px;
     margin: 0;
-}
-
-.controls {
-    display: flex;
-}
-
-.player-sound-bar-timer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 85%;
-    gap: 10px;
-}
-
-.sound-controls {
-    text-align: right;
-}
-
-.sound-bar {
-    vertical-align: middle;
-    margin-bottom: 20px;
-}
-
-.player-bar {
-    width: 100%;
-}
-
-.player-timer {
-    font-size: 14px;
 }
 
 .answers-block {

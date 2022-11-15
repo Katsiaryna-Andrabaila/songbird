@@ -250,6 +250,11 @@ body {
   list-style: none;
 }
 
+.active-category {
+  color: #fc8719;
+  font-weight: 600;
+}
+
 .player-block {
   display: flex;
   width: 100%;
@@ -275,35 +280,6 @@ body {
 .bird-playing {
   font-size: 26px;
   margin: 0;
-}
-
-.controls {
-  display: flex;
-}
-
-.player-sound-bar-timer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 85%;
-  gap: 10px;
-}
-
-.sound-controls {
-  text-align: right;
-}
-
-.sound-bar {
-  vertical-align: middle;
-  margin-bottom: 20px;
-}
-
-.player-bar {
-  width: 100%;
-}
-
-.player-timer {
-  font-size: 14px;
 }
 
 .answers-block {
@@ -523,8 +499,12 @@ body {
   width: 64px;
   height: 64px;
   background: url(../../assets/icons/play.svg);
-  margin: 33px 20px 0 0;
+  margin: 30px 20px 0 0;
   cursor: pointer;
+}
+
+.pause {
+  background: url(../../assets/icons/pause.svg);
 }
 
 .sound-button {
@@ -534,4 +514,61 @@ body {
   border: none;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.sound-off {
+  background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.controls {
+  display: flex;
+}
+
+.player-sound-bar-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  gap: 10px;
+}
+
+.sound-controls {
+  text-align: right;
+}
+
+.sound-bar,
+.player-bar {
+  -webkit-appearance: none;
+  border: 1px solid #025389;
+  height: 5px;
+  background-color: #025389;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.sound-bar::-webkit-slider-thumb,
+.player-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fc8719;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.sound-bar {
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+
+.player-bar {
+  width: 100%;
+}
+
+.player-timer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */
