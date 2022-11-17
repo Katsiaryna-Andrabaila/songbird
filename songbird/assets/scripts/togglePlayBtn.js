@@ -5,8 +5,9 @@ export function togglePlayBtn() {
     const playBtn = document.querySelector('.player-button');
     playBtn.classList.toggle('pause');
     
-    audio.onloadedmetadata = function() {
+    //audio.onloadedmetadata = function() {
         audio.play();
+        console.log(audio.src);
         if (!playBtn.classList.contains('pause')) {
             audio.pause();
             playBtn.classList.remove('pause');
@@ -31,5 +32,5 @@ export function togglePlayBtn() {
 
         document.querySelector('.current-time').innerHTML = getTime(audio.currentTime);
         document.querySelector('.duration-time').innerHTML = getTime(audio.duration);
-    }
+    //}
 }

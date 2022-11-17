@@ -16,7 +16,7 @@ export function getPlayer(parent) {
     let playNum = 0;
     audio.src = playList[playNum];
     audio.currentTime = 0;
-    console.log(playList[playNum]);
+    //console.log(playList[playNum]);
 
     const playerBtn = parent.appendChild(document.createElement('div'));
     playerBtn.classList.add('player-button');
