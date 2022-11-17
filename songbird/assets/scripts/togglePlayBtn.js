@@ -1,36 +1,29 @@
-import {getTime} from "./getTime.js";
-
 export function togglePlayBtn() {
     const audio = document.querySelector('.audio');
     const playBtn = document.querySelector('.player-button');
+    const playerBar = document.querySelector('.player-bar');
     playBtn.classList.toggle('pause');
     
-    //audio.onloadedmetadata = function() {
+    audio.play();
+    console.log(audio.src);
+    if (!playBtn.classList.contains('pause')) {
+        audio.pause();
+        playBtn.classList.remove('pause');
+    } else {
+        playBtn.classList.add('pause');
         audio.play();
-        console.log(audio.src);
-        if (!playBtn.classList.contains('pause')) {
-            audio.pause();
-            playBtn.classList.remove('pause');
-        } else {
-            playBtn.classList.add('pause');
-            audio.play();
-        }
+    }
 
-        document.querySelector('.player-bar').addEventListener('input', function(event) {
-            audio.currentTime = event.target.value;
-        });
+    playerBar.addEventListener('input', function(event) {
+        audio.currentTime = event.target.value;
+    });
 
-        audio.addEventListener('timeupdate', function() {
-            let curTime = parseInt(audio.currentTime);
-            document.querySelector('.player-bar').max = audio.duration;
-            document.querySelector('.player-bar').value = curTime;
-        });
+    audio.addEventListener('timeupdate', function() {
+        playerBar.max = parseInt(audio.duration);
+        setInterval(() => {playerBar.value = audio.currentTime;}, 200);
+    });
 
-        audio.addEventListener('ended', function() {
-            playBtn.classList.remove('pause');
-        });
-
-        document.querySelector('.current-time').innerHTML = getTime(audio.currentTime);
-        document.querySelector('.duration-time').innerHTML = getTime(audio.duration);
-    //}
+    audio.addEventListener('ended', function() {
+        playBtn.classList.remove('pause');
+    });
 }

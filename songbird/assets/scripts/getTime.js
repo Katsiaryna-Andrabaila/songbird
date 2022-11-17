@@ -1,8 +1,6 @@
 export function getTime(value) {
-    console.log(value);
     let time = '';
     let resultTime = Math.floor(Number(value));
-    console.log(resultTime);
     if(resultTime < 60) {
         if(resultTime >= 10) {
             time = `00:${resultTime}`;

@@ -2,8 +2,9 @@ export function getHeader(linkClass) {
     const header = document.querySelector('header');
     header.classList.add('header');
 
-    const logo = header.appendChild(document.createElement('div'));
+    const logo = header.appendChild(document.createElement('a'));
     logo.classList.add('logo');
+    logo.href = '../../index.html';
     const part1Logo = logo.appendChild(document.createElement('span'));
     const part2Logo = logo.appendChild(document.createElement('span'));
     part1Logo.classList.add('part1-logo');

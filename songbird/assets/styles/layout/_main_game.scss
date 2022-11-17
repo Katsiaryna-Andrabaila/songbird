@@ -10,6 +10,10 @@
     color: #f0f8ff;
 }
 
+.counter {
+    display: none;
+}
+
 .score {
     font-size: 24px;
     text-align: right;
@@ -48,17 +52,41 @@
     margin: 10px 0;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-block {
+    display: flex;
+    width: 100%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    align-items: flex-start;
+    padding: 0;
+}
+
 .bird-shadow {
     width: 200px;
+    height: 200px;
+    object-fit: cover;
     background-color: #025389;
     border-radius: 10px;
     margin-right: 40px;
+}
+
+.card-picture {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
 }
 
 .player-block-right {
     display: flex;
     flex-direction: column;
     width: 80%;
+    padding-left: 0;
+    margin: 0;
 }
 
 .bird-playing {
@@ -66,11 +94,20 @@
     margin: 0;
 }
 
+.bird-species {
+    margin: 5px 0;
+}
+
+.bird-description {
+    font-weight: 14px;
+    margin: 10px 0;
+}
+
 .answers-block {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 250px;
+    height: 270px;
 }
 
 .answers,
@@ -84,11 +121,15 @@
 }
 
 .answer {
+    display: flex;
     width: 100%;
     height: 16.67%;
     border: 0.5px dotted #f0f8ff;
     list-style-type: none;
     cursor: pointer;
+}
+.answer:hover {
+    text-shadow: 1px 1px 2px rgb(239, 198, 198), 0 0 1em rgb(198, 198, 242), 0 0 0.2em rgb(198, 198, 204);
 }
 
 .answer-sign {
@@ -98,6 +139,18 @@
     border-radius: 50%;
     background-color: #025389;
     margin: 15px;
+}
+
+.wrong {
+    background-color: #c70707;
+}
+
+.correct {
+    background-color: #07b810;
+}
+
+.answer-text {
+    margin-top: 8px;
 }
 
 .variant {

@@ -1,22 +1,10 @@
 import { togglePlayBtn } from "./togglePlayBtn.js";
 import { turnSound } from "./turnSound.js";
 import {changeVolume} from "./changeVolume.js";
-import {getMixedCategory} from "./getMixedCategory.js";
-import birdsData from "./birdsData.js";
+import {getTime} from "./getTime.js";
 
-export function getPlayer(parent) {
-    const audio = parent.appendChild(document.createElement('audio'));
-    audio.classList.add('audio');
-
-    let playList = [];
-    for (let i = 0; i < birdsData[0].length; i++) {
-        playList.push(birdsData[0][i].audio);
-    }
-    getMixedCategory(playList);
-    let playNum = 0;
-    audio.src = playList[playNum];
-    audio.currentTime = 0;
-    //console.log(playList[playNum]);
+export function getPlayer(parent, audioClass) {
+    const audio = document.querySelector(audioClass);
 
     const playerBtn = parent.appendChild(document.createElement('div'));
     playerBtn.classList.add('player-button');
@@ -52,7 +40,13 @@ export function getPlayer(parent) {
 
     const currentTime = playerTimer.appendChild(document.createElement('span'));
     currentTime.classList.add('current-time');
+    setInterval(() => {
+        currentTime.innerHTML = getTime(audio.currentTime);
+    }, 200);
 
     const durationTime = playerTimer.appendChild(document.createElement('span'));
     durationTime.classList.add('duration-time');
+    audio.onloadedmetadata = function() {
+        durationTime.innerHTML = getTime(audio.duration);
+    }
 }

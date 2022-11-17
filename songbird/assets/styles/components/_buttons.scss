@@ -30,15 +30,13 @@
 }
 
 .info-block-button:hover,
-.gallery-button:hover,
-.next-button:hover {
+.gallery-button:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
     background: gradient(top,  #96cece,  #dee5e6);
 }
 
 .info-block-button:active,
-.gallery-button:active,
-.next-button:active {
+.gallery-button:active {
     border: none;
     bottom: -4px;
 }
@@ -50,14 +48,30 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#0078c9));
     background: gradient(top,  #dee5e6,  #0078c9);
     box-shadow: inset 1px 1px 0 #0078c9;
+    color: #b9bbbc;
+    cursor: default;
+}
+
+.next-active {
     color: #014675;
+    cursor: pointer;
+}
+
+.next-active:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
+    background: gradient(top,  #96cece,  #dee5e6);
+}
+
+.next-active:active {
+    border: none;
+    bottom: -4px;
 }
 
 .player-button {
     width: 64px;
     height: 64px;
     background: url(../../assets/icons/play.svg);
-    margin: 30px 20px 0 0;
+    margin: 25px 10px 0 0;
     cursor: pointer;
 }
 

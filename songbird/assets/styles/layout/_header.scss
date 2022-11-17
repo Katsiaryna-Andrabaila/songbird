@@ -18,6 +18,11 @@
     font-weight: 400;
     font-size: 50px;
     color: #06efef;
+    cursor: pointer;
+}
+
+.logo:hover {
+    text-shadow: 1px 1px 2px rgb(239, 198, 198), 0 0 1em rgb(198, 198, 242), 0 0 0.2em rgb(198, 198, 204);
 }
 
 .part2-logo {

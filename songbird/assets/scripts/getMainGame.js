@@ -1,8 +1,21 @@
 import { getPlayer } from "./getPlayer.js";
+import birdsData from "./birdsData.js";
+import {getMixedCategory} from "./getMixedCategory.js";
+import {checkAnswer} from "./checkAnswer.js";
 
 export function getMainGame() {
     const main = document.querySelector('main');
     main.classList.add('main-game');
+
+    const counter = main.appendChild(document.createElement('p')).classList.add('counter');
+
+    const soundCorrect = main.appendChild(document.createElement('audio'));
+    soundCorrect.classList.add('sound-correct');
+    soundCorrect.src = '../../assets/sounds/correct.mp3';
+
+    const soundWrong = main.appendChild(document.createElement('audio'));
+    soundWrong.classList.add('sound-wrong');
+    soundWrong.src = '../../assets/sounds/wrong.mp3';
 
     const score = main.appendChild(document.createElement('div'));
     score.classList.add('score');
@@ -38,7 +51,18 @@ export function getMainGame() {
     const playerControls = playerBlockRight.appendChild(document.createElement('div'));
     playerControls.classList.add('controls');
 
-    getPlayer(playerControls);
+    const audio = playerControls.appendChild(document.createElement('audio'));
+    audio.classList.add('audio');
+
+    let playList = [];
+    for (let i = 0; i < birdsData[0].length; i++) {
+        playList.push(birdsData[0][i].audio);
+    }
+    getMixedCategory(playList);
+    audio.src = playList[0];
+    audio.currentTime = 0;
+
+    getPlayer(playerControls, '.audio');
 
     const answersBlock = main.appendChild(document.createElement('div'));
     answersBlock.classList.add('answers-block');
@@ -49,11 +73,17 @@ export function getMainGame() {
 
     const answers = answersBlock.appendChild(document.createElement('ul'));
     answers.classList.add('answers');
-    const answerSigns = [];
+    
     for (let i = 0; i < 6; i++) {
         answers.appendChild(document.createElement('li'));
         answers.childNodes[i].classList.add('answer');
-        answerSigns.push(answers.childNodes[i].appendChild(document.createElement('span')).classList.add('answer-sign'));
+        answers.childNodes[i].appendChild(document.createElement('span')).classList.add('answer-sign');
+        answers.childNodes[i].appendChild(document.createElement('p')).classList.add('answer-text');
+    }
+    const answerTextArr = document.querySelectorAll('.answer-text');
+    for (let i = 0; i < answerTextArr.length; i++) {
+        answerTextArr[i].textContent = birdsData[0][i].name;
+        answerTextArr[i].addEventListener('click', checkAnswer);
     }
 
     const nextBtn = main.appendChild(document.createElement('button'));
