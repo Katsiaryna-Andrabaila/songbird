@@ -4,7 +4,7 @@ export function getHeader(linkClass) {
 
     const logo = header.appendChild(document.createElement('a'));
     logo.classList.add('logo');
-    logo.href = '../../index.html';
+    logo.href = './index.html';
     const part1Logo = logo.appendChild(document.createElement('span'));
     const part2Logo = logo.appendChild(document.createElement('span'));
     part1Logo.classList.add('part1-logo');
@@ -18,19 +18,19 @@ export function getHeader(linkClass) {
     const headerLink = headerNav.appendChild(document.createElement('a'));
     headerLink.classList.add('header-link');
     headerLink.classList.add('about-link');
-    headerLink.href = '../../index.html';
+    headerLink.href = './index.html';
     headerLink.textContent = 'О проекте';
 
     const quizLink = headerNav.appendChild(document.createElement('a'));
     quizLink.classList.add('header-link');
     quizLink.classList.add('quiz-link');
-    quizLink.href = '../../game.html';
+    quizLink.href = './game.html';
     quizLink.textContent = 'Викторина';
 
     const galleryLink = headerNav.appendChild(document.createElement('a'));
     galleryLink.classList.add('header-link');
     galleryLink.classList.add('gallery-link');
-    galleryLink.href = '../../gallery.html';
+    galleryLink.href = './gallery.html';
     galleryLink.textContent = 'Галерея птиц';
 
     if(linkClass) {
