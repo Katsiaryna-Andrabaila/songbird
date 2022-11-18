@@ -4,51 +4,29 @@ import {getMixedCategory} from "./getMixedCategory.js";
 import {checkAnswer} from "./checkAnswer.js";
 import {goToNextLevel} from "./goToNextLevel.js";
 
-export function getMainGame() {
-    const main = document.querySelector('main');
-    main.classList.add('main-game');
-    main.innerHTML = '';
-
-    const soundCorrect = main.appendChild(document.createElement('audio'));
-    soundCorrect.classList.add('sound-correct');
-    soundCorrect.src = '../../assets/sounds/correct.mp3';
-
-    const soundWrong = main.appendChild(document.createElement('audio'));
-    soundWrong.classList.add('sound-wrong');
-    soundWrong.src = '../../assets/sounds/wrong.mp3';
-
-    const score = main.appendChild(document.createElement('div'));
-    score.classList.add('score');
-    score.textContent = 'Очки: 0';
-
-    const questionCategory = main.appendChild(document.createElement('nav'));
-    questionCategory.classList.add('question-category');
-
-    const questions = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
-
-    for (let i = 0; i < questions.length; i++) {
-        questionCategory.appendChild(document.createElement('li'));
-        questionCategory.childNodes[i].classList.add('category');
-        questionCategory.childNodes[i].textContent = questions[i];
-    }
+export function getLevel() {
+    const main = document.querySelector('.main-game');
 
     let level = 0;
 
+    const questionCategory = document.querySelectorAll('.category');
+
     for (let i = 0; i < questionCategory.length; i++) {
-        if(!questionCategory.childNodes[i].classList.contains('active-category')) {
+        if(!questionCategory[i].classList.contains('active-category')) {
             level = level;
-        } else {
-            level++;
-            questionCategory.childNodes[i].classList.remove('active-category');
+        }
+        if(questionCategory[i].classList.contains('active-category')) {
+            questionCategory[i].classList.remove('active-category');
+            level = i + 1;
         }
     }
 
     console.log(level);
 
-    questionCategory.childNodes[level].classList.add('active-category');
+    questionCategory[level].classList.add('active-category');
 
-    const playerBlock = main.appendChild(document.createElement('div'));
-    playerBlock.classList.add('player-block');
+    const playerBlock = document.querySelector('.player-block');
+    playerBlock.innerHTML = '';
 
     const birdShadow = playerBlock.appendChild(document.createElement('img'));
     birdShadow.classList.add('bird-shadow');
@@ -77,8 +55,8 @@ export function getMainGame() {
 
     getPlayer(playerControls, '.audio');
 
-    const answersBlock = main.appendChild(document.createElement('div'));
-    answersBlock.classList.add('answers-block');
+    const answersBlock = document.querySelector('.answers-block');
+    answersBlock.innerHTML = '';
 
     const variant = answersBlock.appendChild(document.createElement('div'));
     variant.classList.add('variant');
@@ -100,8 +78,6 @@ export function getMainGame() {
         answerLiArr[i].addEventListener('click', checkAnswer);
     }
 
-    const nextBtn = main.appendChild(document.createElement('button'));
-    nextBtn.classList.add('next-button');
-    nextBtn.textContent = 'Следующий вопрос';
+    const nextBtn = document.querySelector('.next-button');
     nextBtn.addEventListener('click', goToNextLevel);
 }

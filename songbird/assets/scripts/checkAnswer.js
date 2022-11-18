@@ -3,9 +3,19 @@ import {getBirdCard} from "./getBirdCard.js";
 
 let count = 5;
 export function checkAnswer(event) {
+    const questionCategory = document.querySelectorAll('.category');
+    let level;
+    for(let i = 0; i < questionCategory.length; i++) {
+        if(questionCategory[i].classList.contains('active-category')) {
+            level = i;
+        }
+    }
+    console.log(level);
+
     const answerTextArr = document.querySelectorAll('.answer-text');
     const score = document.querySelector('.score');
     const counter = document.querySelector('.counter');
+    const prevCount = Number(counter.textContent);
     const birdName = document.querySelector('.bird-playing');
     const soundCorrect = document.querySelector('.sound-correct');
     const soundWrong = document.querySelector('.sound-wrong');
@@ -21,34 +31,35 @@ export function checkAnswer(event) {
         }
     }
 
-    for (let i = 0; i < birdsData[0].length; i++) {
-        if(targetAnswer.textContent === birdsData[0][i].name && audio.src === birdsData[0][i].audio) {
+    for (let i = 0; i < birdsData[level].length; i++) {
+        if(targetAnswer.textContent === birdsData[level][i].name && audio.src === birdsData[level][i].audio) {
             audio.pause();
             playBtn.classList.remove('pause');
             soundCorrect.play();
             targetAnswer.previousSibling.classList.add('correct');
             nextBtn.classList.add('next-active');
-            birdShadow.src = birdsData[0][i].image;
-            birdName.textContent = birdsData[0][i].name;
-            score.textContent = `Очки: ${Number(score.textContent.slice(score.textContent.length - 1)) + count}`;
-            getBirdCard(birdsData[0][i]);
+            birdShadow.src = birdsData[level][i].image;
+            birdName.textContent = birdsData[level][i].name;
+            score.textContent = `Очки: ${Number(score.textContent.slice(6)) + count}`;
+            getBirdCard(birdsData[level][i]);
             const answerLiArr = document.querySelectorAll('.answer');
             for (let i = 0; i < answerLiArr.length; i++) {
                 answerLiArr[i].removeEventListener('click', checkAnswer);
                 answerLiArr[i].addEventListener('click', function() {
-                    getBirdCard(birdsData[0][i]);
+                    getBirdCard(birdsData[level][i]);
                 });
             }
         }
-        if (targetAnswer.textContent === birdsData[0][i].name && audio.src !== birdsData[0][i].audio) {
+        if (targetAnswer.textContent === birdsData[level][i].name && audio.src !== birdsData[level][i].audio) {
             soundWrong.currentTime = 0;
             soundWrong.play();
             targetAnswer.previousSibling.classList.add('wrong');
             variant.innerHTML = '';
-            getBirdCard(birdsData[0][i]);
+            getBirdCard(birdsData[level][i]);
             count--;
         }
     }
+    console.log(counter.textContent);
     counter.textContent = count;
     console.log(counter.textContent);
 }
