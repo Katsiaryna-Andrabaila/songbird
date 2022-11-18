@@ -2,12 +2,11 @@ import { getPlayer } from "./getPlayer.js";
 import birdsData from "./birdsData.js";
 import {getMixedCategory} from "./getMixedCategory.js";
 import {checkAnswer} from "./checkAnswer.js";
+import {goToNextLevel} from "./goToNextLevel.js";
 
 export function getMainGame() {
     const main = document.querySelector('main');
     main.classList.add('main-game');
-
-    const counter = main.appendChild(document.createElement('p')).classList.add('counter');
 
     const soundCorrect = main.appendChild(document.createElement('audio'));
     soundCorrect.classList.add('sound-correct');
@@ -81,12 +80,14 @@ export function getMainGame() {
         answers.childNodes[i].appendChild(document.createElement('p')).classList.add('answer-text');
     }
     const answerTextArr = document.querySelectorAll('.answer-text');
+    const answerLiArr = document.querySelectorAll('.answer');
     for (let i = 0; i < answerTextArr.length; i++) {
         answerTextArr[i].textContent = birdsData[0][i].name;
-        answerTextArr[i].addEventListener('click', checkAnswer);
+        answerLiArr[i].addEventListener('click', checkAnswer);
     }
 
     const nextBtn = main.appendChild(document.createElement('button'));
     nextBtn.classList.add('next-button');
     nextBtn.textContent = 'Следующий вопрос';
+    nextBtn.addEventListener('click', goToNextLevel);
 }

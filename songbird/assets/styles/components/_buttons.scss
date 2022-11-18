@@ -72,7 +72,12 @@
     height: 64px;
     background: url(../../assets/icons/play.svg);
     margin: 25px 10px 0 0;
+    border-radius: 50%;
     cursor: pointer;
+}
+
+.player-button:hover {
+    background-color: #5894ee;
 }
 
 .pause {
@@ -86,8 +91,48 @@
     border: none;
     margin-right: 10px;
     cursor: pointer;
+    border-radius: 50%;
+}
+
+.sound-button:hover {
+    background-color: #5894ee;
 }
 
 .sound-off {
+    background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.card-player-button {
+    width: 64px;
+    height: 64px;
+    background: url(../../assets/icons/play.svg);
+    margin: 25px 10px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card-player-button:hover {
+    background-color: #5894ee;
+}
+
+.card-pause {
+    background: url(../../assets/icons/pause.svg);
+}
+
+.card-sound-button {
+    width: 32px;
+    height: 32px;
+    background: url(../../assets/icons/sound-on-icon.svg);
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.card-sound-button:hover {
+    background-color: #5894ee;
+}
+
+.card-sound-off {
     background: url(../../assets/icons/sound-off-icon.svg);
 }

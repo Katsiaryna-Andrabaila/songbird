@@ -2,6 +2,8 @@ export function getFooter() {
     const footer = document.querySelector('footer');
     footer.classList.add('footer');
 
+    footer.appendChild(document.createElement('p')).classList.add('counter');
+
     const author = footer.appendChild(document.createElement('a'));
     author.classList.add('author-link');
     author.classList.add('footer-item');

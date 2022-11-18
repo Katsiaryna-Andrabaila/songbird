@@ -1,4 +1,4 @@
-import { getPlayer } from "./getPlayer.js";
+import { getCardPlayer } from "./getCardPlayer.js";
 
 export function getBirdCard(data) {
     const card = document.querySelector('.variant');
@@ -33,7 +33,7 @@ export function getBirdCard(data) {
     cardAudio.src = data.audio;
     cardAudio.currentTime = 0;
 
-    getPlayer(playerControls, '.card-audio');
+    getCardPlayer(playerControls, '.card-audio');
     
     const birdDescription = card.appendChild(document.createElement('p'));
     birdDescription.classList.add('bird-description');

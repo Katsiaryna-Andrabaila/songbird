@@ -226,10 +226,6 @@ body {
   color: #f0f8ff;
 }
 
-.counter {
-  display: none;
-}
-
 .score {
   font-size: 24px;
   text-align: right;
@@ -447,6 +443,10 @@ body {
   padding: 0 50px;
 }
 
+.counter {
+  display: none;
+}
+
 .footer-item {
   font-family: "Playfair Display";
   font-weight: 700;
@@ -574,7 +574,12 @@ body {
   height: 64px;
   background: url(../../assets/icons/play.svg);
   margin: 25px 10px 0 0;
+  border-radius: 50%;
   cursor: pointer;
+}
+
+.player-button:hover {
+  background-color: #5894ee;
 }
 
 .pause {
@@ -588,9 +593,49 @@ body {
   border: none;
   margin-right: 10px;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.sound-button:hover {
+  background-color: #5894ee;
 }
 
 .sound-off {
+  background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.card-player-button {
+  width: 64px;
+  height: 64px;
+  background: url(../../assets/icons/play.svg);
+  margin: 25px 10px 0 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card-player-button:hover {
+  background-color: #5894ee;
+}
+
+.card-pause {
+  background: url(../../assets/icons/pause.svg);
+}
+
+.card-sound-button {
+  width: 32px;
+  height: 32px;
+  background: url(../../assets/icons/sound-on-icon.svg);
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.card-sound-button:hover {
+  background-color: #5894ee;
+}
+
+.card-sound-off {
   background: url(../../assets/icons/sound-off-icon.svg);
 }
 
@@ -645,4 +690,34 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+}
+
+.card-sound-bar,
+.card-player-bar {
+  -webkit-appearance: none;
+  border: 1px solid #025389;
+  height: 5px;
+  background-color: #025389;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.card-sound-bar::-webkit-slider-thumb,
+.card-player-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fc8719;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.card-sound-bar {
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+
+.card-player-bar {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

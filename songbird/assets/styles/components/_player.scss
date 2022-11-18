@@ -50,3 +50,33 @@
     justify-content: space-between;
     font-size: 14px;
 }
+
+.card-sound-bar,
+.card-player-bar {
+    -webkit-appearance: none;
+    border: 1px solid #025389;
+	height: 5px;
+    background-color: #025389;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.card-sound-bar::-webkit-slider-thumb,
+.card-player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fc8719;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.card-sound-bar {
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.card-player-bar {
+    width: 100%;
+}
