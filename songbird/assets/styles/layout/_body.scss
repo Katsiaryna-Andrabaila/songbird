@@ -9,3 +9,17 @@ body {
     background: url(../../assets/img/birds-picture-right.jpg) center no-repeat;
     background-size: cover;
 }
+
+.gallery-body {
+    height: auto;
+    background: none;
+    background-color: #cee4f3;
+}
+
+@media (max-width: 800px) {
+
+    body {
+        background: url(../../assets/icons/flying-feathers.png) center no-repeat;
+        background-color: #cee4f3;
+    }
+}

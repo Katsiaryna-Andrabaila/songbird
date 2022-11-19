@@ -31,7 +31,7 @@ export function getHeader(linkClass) {
     galleryLink.classList.add('header-link');
     galleryLink.classList.add('gallery-link');
     galleryLink.href = './gallery.html';
-    galleryLink.textContent = 'Галерея птиц';
+    galleryLink.textContent = 'Галерея';
 
     if(linkClass) {
         const inactiveLink = document.querySelector(`.${linkClass}`);

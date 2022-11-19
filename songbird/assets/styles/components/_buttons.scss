@@ -20,14 +20,14 @@
 
 .gallery-button {
     position: absolute;
-    width: 80%;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border: 1px solid #487fe3;
     border-bottom: 4px solid #487fe3;
     border-radius: 50%;
     box-shadow: inset 1px 1px 0 #487fe3;
-    top: 15px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
 }
 
 .info-block-button:hover,
@@ -153,4 +153,80 @@
     margin: 40px 0 0 0;
     padding: 5px;
     font-size: 24px;
+}
+
+@media (max-width: 1300px) {
+
+    .card-player-button {
+        background: url(../../assets/icons/play-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    /* .card-sound-button {
+        width: 22px;
+        height: 22px;
+        background: url(../../assets/icons/sound-on-middle.svg);
+    }
+    
+    .card-sound-off {
+        width: 22px;
+        height: 22px;
+        background: url(../../assets/icons/sound-off-middle.svg);
+    } */
+}
+
+@media (max-width: 900px) {
+
+    .info-block-button,
+    .next-button,
+    .again-button {
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .gallery-button {
+        width: 160px;
+        height: 160px;
+        top: 10px;
+        right: 15px;
+        font-size: 14px;
+    }
+
+    .next-button {
+        width: 100%;
+    }
+
+    .card-player-button {
+        background: url(../../assets/icons/play-small.svg);
+        width: 34px;
+        height: 34px;
+        margin-top: 30px;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-small.svg);
+        width: 34px;
+        height: 34px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .info-block-button,
+    .next-button,
+    .again-button {
+        width: 100px;
+        height: 25px;
+        font-size: 14px;
+        margin-top: 0;
+    }
 }

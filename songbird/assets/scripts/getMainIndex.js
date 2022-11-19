@@ -10,7 +10,7 @@ export function getMainIndex() {
     infoBlockText.innerHTML = '<b>Songbird</b> - известная викторина, в которой задачей игрока является угадать птицу по её голосу.<br><b>Начнём?</b>';
 
     const infoBlockBtnLink = infoBlock.appendChild(document.createElement('a'));
-    infoBlockBtnLink.href = '../../game.html';
+    infoBlockBtnLink.href = './game.html';
     
     const infoBlockBtn = infoBlockBtnLink.appendChild(document.createElement('button'));
     infoBlockBtn.classList.add('info-block-button');
@@ -23,7 +23,7 @@ export function getMainIndex() {
     galleryBtnBorder.classList.add('gallery-button-border');
 
     const galleryBtnLink = galleryBtnBlock.appendChild(document.createElement('a'));
-    galleryBtnLink.href = '../../gallery.html';
+    galleryBtnLink.href = './gallery.html';
 
     const galleryBtn = galleryBtnLink.appendChild(document.createElement('button'));
     galleryBtn.classList.add('gallery-button');

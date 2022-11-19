@@ -51,3 +51,34 @@
     color: #fc8719;
     cursor: default;
 }
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .header-link {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .header-link {
+        font-size: 16px;
+    }
+}
