@@ -12,7 +12,7 @@ export function getFooter() {
     
     const githubImg = author.appendChild(document.createElement('img'));
     githubImg.classList.add('github-img');
-    githubImg.src = '../../assets/icons/github.png';
+    githubImg.src = './assets/icons/github.png';
     githubImg.alt = 'GitHub link';
 
     const year = footer.appendChild(document.createElement('p'));

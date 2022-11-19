@@ -372,6 +372,37 @@ body {
   padding: 10px;
 }
 
+.main-results {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  color: #f0f8ff;
+}
+
+.congratulations {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 120, 201, 0.7019607843);
+  border-radius: 10px;
+  margin: 80px auto;
+  padding: 50px;
+}
+
+.results-header {
+  margin-top: 0;
+}
+
+.again-button-link {
+  width: 100%;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -502,7 +533,8 @@ body {
 
 .info-block-button,
 .gallery-button,
-.next-button {
+.next-button,
+.again-button {
   width: 150px;
   height: 40px;
   text-decoration: none;
@@ -552,6 +584,7 @@ body {
   box-shadow: inset 1px 1px 0 #0078c9;
   color: #b9bbbc;
   cursor: default;
+  margin: 0;
 }
 
 .next-active {
@@ -559,12 +592,14 @@ body {
   cursor: pointer;
 }
 
-.next-active:hover {
+.next-active:hover,
+.again-button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
   background: gradient(top, #96cece, #dee5e6);
 }
 
-.next-active:active {
+.next-active:active,
+.again-button:active {
   border: none;
   bottom: -4px;
 }
@@ -637,6 +672,20 @@ body {
 
 .card-sound-off {
   background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.again-button {
+  width: 100%;
+  border: 1px solid #0078c9;
+  border-bottom: 4px solid #0078c9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#0078c9));
+  background: gradient(top, #dee5e6, #0078c9);
+  box-shadow: inset 1px 1px 0 #0078c9;
+  color: #014675;
+  cursor: pointer;
+  margin: 40px 0 0 0;
+  padding: 5px;
+  font-size: 24px;
 }
 
 .controls {

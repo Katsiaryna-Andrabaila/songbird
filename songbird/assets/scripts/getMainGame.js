@@ -2,7 +2,6 @@ import { getPlayer } from "./getPlayer.js";
 import birdsData from "./birdsData.js";
 import {getMixedCategory} from "./getMixedCategory.js";
 import {checkAnswer} from "./checkAnswer.js";
-import {goToNextLevel} from "./goToNextLevel.js";
 
 export function getMainGame() {
     const main = document.querySelector('main');
@@ -11,15 +10,16 @@ export function getMainGame() {
 
     const soundCorrect = main.appendChild(document.createElement('audio'));
     soundCorrect.classList.add('sound-correct');
-    soundCorrect.src = '../../assets/sounds/correct.mp3';
+    soundCorrect.src = './assets/sounds/correct.mp3';
 
     const soundWrong = main.appendChild(document.createElement('audio'));
     soundWrong.classList.add('sound-wrong');
-    soundWrong.src = '../../assets/sounds/wrong.mp3';
+    soundWrong.src = './assets/sounds/wrong.mp3';
 
     const score = main.appendChild(document.createElement('div'));
     score.classList.add('score');
     score.textContent = 'Очки: 0';
+    score.dataset.answerScore = '5';
 
     const questionCategory = main.appendChild(document.createElement('nav'));
     questionCategory.classList.add('question-category');
@@ -33,7 +33,6 @@ export function getMainGame() {
     }
 
     let level = 0;
-
     for (let i = 0; i < questionCategory.length; i++) {
         if(!questionCategory.childNodes[i].classList.contains('active-category')) {
             level = level;
@@ -43,8 +42,6 @@ export function getMainGame() {
         }
     }
 
-    console.log(level);
-
     questionCategory.childNodes[level].classList.add('active-category');
 
     const playerBlock = main.appendChild(document.createElement('div'));
@@ -52,7 +49,7 @@ export function getMainGame() {
 
     const birdShadow = playerBlock.appendChild(document.createElement('img'));
     birdShadow.classList.add('bird-shadow');
-    birdShadow.src = '../../assets/icons/bird_shadow.png';
+    birdShadow.src = './assets/icons/bird_shadow.png';
 
     const playerBlockRight = playerBlock.appendChild(document.createElement('ul'));
     playerBlockRight.classList.add('player-block-right');
@@ -100,8 +97,11 @@ export function getMainGame() {
         answerLiArr[i].addEventListener('click', checkAnswer);
     }
 
-    const nextBtn = main.appendChild(document.createElement('button'));
+    const nextBtnLink = main.appendChild(document.createElement('a'));
+    nextBtnLink.classList.add('next-button-link');
+    nextBtnLink.href = '#';
+
+    const nextBtn = nextBtnLink.appendChild(document.createElement('button'));
     nextBtn.classList.add('next-button');
     nextBtn.textContent = 'Следующий вопрос';
-    nextBtn.addEventListener('click', goToNextLevel);
 }

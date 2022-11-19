@@ -1,0 +1,32 @@
+.main-results {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: #f0f8ff;
+}
+
+.congratulations {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0078c9b3;
+    border-radius: 10px;
+    margin: 80px auto;
+    padding: 50px;
+}
+
+.results-header {
+    margin-top: 0;
+}
+
+
+
+.again-button-link {
+    width: 100%;
+}
