@@ -23,12 +23,7 @@ export function getMainResults() {
         resultsInfo.textContent = `Вы прошли викторину, набрали ${scoreNum} из 30 возможных баллов и стали абсолютным чемпионом! Вы МОЛОДЧИНА! Держите конфетку:`;
         const candy = congratulationsBlock.appendChild(document.createElement('img'));
         candy.classList.add('candy');
-        candy.addEventListener('click', function() {
-            congratulations.classList.add('more-candy');
-            resultsHeader.innerHTML = '';
-            resultsInfo.innerHTML = '';
-            document.removeChild(candy);
-        });
+        candy.src = './assets/icons/candy.png';
     }
 
     const againBtnLink = congratulationsBlock.appendChild(document.createElement('a'));

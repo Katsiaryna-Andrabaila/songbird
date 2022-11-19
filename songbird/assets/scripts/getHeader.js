@@ -36,5 +36,6 @@ export function getHeader(linkClass) {
     if(linkClass) {
         const inactiveLink = document.querySelector(`.${linkClass}`);
         inactiveLink.classList.add('inactive-link');
+        inactiveLink.href = '#';
     }
 }
