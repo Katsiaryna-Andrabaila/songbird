@@ -26,6 +26,7 @@ export function getBirdCard(data) {
 
     const playerControls = playerBlockRight.appendChild(document.createElement('div'));
     playerControls.classList.add('controls');
+    playerControls.classList.add('card-controls');
 
     const cardAudio = playerControls.appendChild(document.createElement('audio'));
     cardAudio.classList.add('card-audio');

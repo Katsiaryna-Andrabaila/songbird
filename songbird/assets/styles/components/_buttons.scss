@@ -168,18 +168,6 @@
         width: 44px;
         height: 44px;
     }
-
-    /* .card-sound-button {
-        width: 22px;
-        height: 22px;
-        background: url(../../assets/icons/sound-on-middle.svg);
-    }
-    
-    .card-sound-off {
-        width: 22px;
-        height: 22px;
-        background: url(../../assets/icons/sound-off-middle.svg);
-    } */
 }
 
 @media (max-width: 900px) {
@@ -190,6 +178,18 @@
         width: 100px;
         height: 30px;
         font-size: 16px;
+    }
+
+    .player-button {
+        background: url(../../assets/icons/play-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    .pause {
+        background: url(../../assets/icons/pause-middle.svg);
+        width: 44px;
+        height: 44px;
     }
 
     .gallery-button {
@@ -208,13 +208,26 @@
         background: url(../../assets/icons/play-small.svg);
         width: 34px;
         height: 34px;
-        margin-top: 30px;
+        margin: 10px 5px 0 0;
     }
 
     .card-pause {
         background: url(../../assets/icons/pause-small.svg);
         width: 34px;
         height: 34px;
+    }
+
+    .card-sound-button {
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/icons/sound-on16-my.svg);
+        margin: 0;
+    }
+    
+    .card-sound-off {
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/icons/sound-off16.svg);
     }
 
 }
@@ -228,5 +241,50 @@
         height: 25px;
         font-size: 14px;
         margin-top: 0;
+    }
+
+    .player-button {
+        margin-right: 0;
+    }
+
+    .sound-button {
+        margin: 0;
+    }
+
+    .card-sound-button {
+        margin: 0;
+    }
+
+    .card-player-button {
+        background: url(../../assets/icons/play-small2.svg);
+        width: 20px;
+        height: 20px;
+        margin: 15px 2px 0 5px;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-small2.svg);
+        width: 20px;
+        height: 20px;
+    }
+
+    .next-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .player-button {
+        background: url(../../assets/icons/play-small.svg);
+        width: 34px;
+        height: 34px;
+        margin-top: 30px;
+    }
+
+    .pause {
+        background: url(../../assets/icons/pause-small.svg);
+        width: 34px;
+        height: 34px;
     }
 }

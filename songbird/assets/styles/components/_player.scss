@@ -80,3 +80,41 @@
 .card-player-bar {
     width: 100%;
 }
+
+@media (max-width: 900px) {
+
+    .card-sound-bar,
+    .card-player-bar {
+	    height: 2px;
+        border-radius: 2px;
+        margin: 0;
+    }
+
+    .card-sound-bar::-webkit-slider-thumb,
+    .card-player-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .card-sound-bar {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .sound-bar,
+    .player-bar {
+	    height: 3px;
+        border-radius: 2px;
+    }
+
+    .sound-bar::-webkit-slider-thumb,
+    .player-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}

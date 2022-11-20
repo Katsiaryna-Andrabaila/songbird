@@ -553,6 +553,9 @@ body {
   .bird-playing {
     font-size: 14px;
   }
+  .player-block {
+    padding: 10px;
+  }
   .answers-block {
     height: 200px;
   }
@@ -562,6 +565,12 @@ body {
   .card-picture {
     width: 110px;
     height: 110px;
+  }
+  .bird-shadow {
+    margin-right: 10px;
+  }
+  .card-picture {
+    margin-right: 2px;
   }
   .bird-species {
     font-size: 14px;
@@ -573,6 +582,34 @@ body {
   }
   .bird-description:hover {
     overflow: auto;
+  }
+}
+@media (max-width: 500px) {
+  .main-game {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .category {
+    overflow: hidden;
+    font-weight: 100;
+    word-wrap: break-word;
+  }
+  .active-category {
+    font-weight: 100;
+  }
+  .bird-shadow {
+    width: 120px;
+    height: 120px;
+  }
+  .card-picture {
+    width: 50px;
+    height: 50px;
+  }
+  .card-controls {
+    margin-left: -50px;
+  }
+  .bird-description {
+    word-wrap: break-word;
   }
 }
 .main-results {
@@ -702,6 +739,7 @@ body {
 
 @media (max-width: 800px) {
   .header {
+    height: 40px;
     padding: 0 10px;
   }
   .logo {
@@ -714,6 +752,7 @@ body {
 }
 @media (max-width: 600px) {
   .header {
+    height: 30px;
     padding: 0;
   }
   .logo {
@@ -798,6 +837,7 @@ body {
 
 @media (max-width: 800px) {
   .footer {
+    height: 40px;
     padding: 0 10px;
   }
   .footer-item {
@@ -826,6 +866,7 @@ body {
 }
 @media (max-width: 450px) {
   .footer {
+    height: 30px;
     padding: 0;
   }
   .footer-item {
@@ -1010,17 +1051,6 @@ body {
     width: 44px;
     height: 44px;
   }
-  /* .card-sound-button {
-      width: 22px;
-      height: 22px;
-      background: url(../../assets/icons/sound-on-middle.svg);
-  }
-
-  .card-sound-off {
-      width: 22px;
-      height: 22px;
-      background: url(../../assets/icons/sound-off-middle.svg);
-  } */
 }
 @media (max-width: 900px) {
   .info-block-button,
@@ -1029,6 +1059,16 @@ body {
     width: 100px;
     height: 30px;
     font-size: 16px;
+  }
+  .player-button {
+    background: url(../../assets/icons/play-middle.svg);
+    width: 44px;
+    height: 44px;
+  }
+  .pause {
+    background: url(../../assets/icons/pause-middle.svg);
+    width: 44px;
+    height: 44px;
   }
   .gallery-button {
     width: 160px;
@@ -1044,12 +1084,23 @@ body {
     background: url(../../assets/icons/play-small.svg);
     width: 34px;
     height: 34px;
-    margin-top: 30px;
+    margin: 10px 5px 0 0;
   }
   .card-pause {
     background: url(../../assets/icons/pause-small.svg);
     width: 34px;
     height: 34px;
+  }
+  .card-sound-button {
+    width: 16px;
+    height: 16px;
+    background: url(../../assets/icons/sound-on16-my.svg);
+    margin: 0;
+  }
+  .card-sound-off {
+    width: 16px;
+    height: 16px;
+    background: url(../../assets/icons/sound-off16.svg);
   }
 }
 @media (max-width: 700px) {
@@ -1060,6 +1111,42 @@ body {
     height: 25px;
     font-size: 14px;
     margin-top: 0;
+  }
+  .player-button {
+    margin-right: 0;
+  }
+  .sound-button {
+    margin: 0;
+  }
+  .card-sound-button {
+    margin: 0;
+  }
+  .card-player-button {
+    background: url(../../assets/icons/play-small2.svg);
+    width: 20px;
+    height: 20px;
+    margin: 15px 2px 0 5px;
+  }
+  .card-pause {
+    background: url(../../assets/icons/pause-small2.svg);
+    width: 20px;
+    height: 20px;
+  }
+  .next-button {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .player-button {
+    background: url(../../assets/icons/play-small.svg);
+    width: 34px;
+    height: 34px;
+    margin-top: 30px;
+  }
+  .pause {
+    background: url(../../assets/icons/pause-small.svg);
+    width: 34px;
+    height: 34px;
   }
 }
 .controls {
@@ -1143,4 +1230,35 @@ body {
 
 .card-player-bar {
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .card-sound-bar,
+.card-player-bar {
+    height: 2px;
+    border-radius: 2px;
+    margin: 0;
+  }
+  .card-sound-bar::-webkit-slider-thumb,
+.card-player-bar::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .card-sound-bar {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .sound-bar,
+.player-bar {
+    height: 3px;
+    border-radius: 2px;
+  }
+  .sound-bar::-webkit-slider-thumb,
+.player-bar::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
