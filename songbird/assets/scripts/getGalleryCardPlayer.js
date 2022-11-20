@@ -1,6 +1,6 @@
 import { toggleGalleryCardPlayBtn } from "./toggleGalleryCardPlayBtn.js";
-import { turnCardSound } from "./turnCardSound.js";
-import {changeCardVolume} from "./changeCardVolume.js";
+import { turnGalleryCardSound } from "./turnGalleryCardSound.js";
+import {changeGalleryCardVolume} from "./changeGalleryCardVolume.js";
 import {getTime} from "./getTime.js";
 
 export function getGalleryCardPlayer(parent, audioClass) {
@@ -18,7 +18,7 @@ export function getGalleryCardPlayer(parent, audioClass) {
 
     const soundBtn = soundControls.appendChild(document.createElement('button'));
     soundBtn.classList.add('card-sound-button');
-    soundBtn.addEventListener('click', turnCardSound);
+    soundBtn.addEventListener('click', turnGalleryCardSound);
 
     const soundBar = soundControls.appendChild(document.createElement('input'));
     soundBar.classList.add('card-sound-bar');
@@ -27,7 +27,7 @@ export function getGalleryCardPlayer(parent, audioClass) {
     soundBar.max = '1';
     soundBar.step = '0.01';
     soundBar.value = '1';
-    soundBar.addEventListener('input', changeCardVolume);
+    soundBar.addEventListener('input', changeGalleryCardVolume);
 
     const playerBar = playerSoundBarTimer.appendChild(document.createElement('input'));
     playerBar.classList.add('card-player-bar');
