@@ -230,6 +230,10 @@
         background: url(../../assets/icons/sound-off16.svg);
     }
 
+    .again-button {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -268,9 +272,11 @@
         height: 20px;
     }
 
-    .next-button {
+    .next-button,
+    .again-button {
         width: 100%;
     }
+
 }
 
 @media (max-width: 500px) {

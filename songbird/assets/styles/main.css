@@ -665,6 +665,18 @@ body {
   width: 100%;
 }
 
+@media (max-width: 700px) {
+  .congratulations {
+    margin: 50px auto;
+    padding: 20px;
+  }
+  .results-header {
+    font-size: 34px;
+  }
+  .results-info {
+    font-size: 20px;
+  }
+}
 .gallery-cards {
   display: flex;
   flex-direction: column;
@@ -1102,6 +1114,9 @@ body {
     height: 16px;
     background: url(../../assets/icons/sound-off16.svg);
   }
+  .again-button {
+    width: 100%;
+  }
 }
 @media (max-width: 700px) {
   .info-block-button,
@@ -1132,7 +1147,8 @@ body {
     width: 20px;
     height: 20px;
   }
-  .next-button {
+  .next-button,
+.again-button {
     width: 100%;
   }
 }
