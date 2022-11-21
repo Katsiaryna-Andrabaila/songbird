@@ -1,10 +1,14 @@
+import {getLanguage} from "./getLanguage.js";
 import { getPlayer } from "./getPlayer.js";
 import birdsData from "./birdsData.js";
+import birdsDataEN from "./birdsDataEN.js";
 import {getMixedCategory} from "./getMixedCategory.js";
 import {checkAnswer} from "./checkAnswer.js";
 import {getMainResults} from "./getMainResults.js";
 
 export function getLevel() {
+    const language = getLanguage();
+
     const main = document.querySelector('.main-game');
 
     let level = 0;
@@ -21,13 +25,12 @@ export function getLevel() {
         }
     }
 
-    console.log(level);
-
     const nextBtn = document.querySelector('.next-button');
     nextBtn.classList.remove('next-active');
     nextBtn.removeEventListener('click', getLevel);
     if(level === 5) {
-        nextBtn.textContent = 'Посмотреть результат';
+        if(language === 'ru') nextBtn.textContent = 'Посмотреть результат';
+        if(language === 'en') nextBtn.textContent = 'Show results';
         nextBtn.addEventListener('click', getMainResults);
     }
 
@@ -53,9 +56,13 @@ export function getLevel() {
     const audio = playerControls.appendChild(document.createElement('audio'));
     audio.classList.add('audio');
 
+    let arr;
+    if(language === 'ru') arr = birdsData;
+    if(language === 'en') arr = birdsDataEN;
+
     let playList = [];
-    for (let i = 0; i < birdsData[level].length; i++) {
-        playList.push(birdsData[level][i].audio);
+    for (let i = 0; i < arr[level].length; i++) {
+        playList.push(arr[level][i].audio);
     }
     getMixedCategory(playList);
     audio.src = playList[0];
@@ -68,7 +75,8 @@ export function getLevel() {
 
     const variant = answersBlock.appendChild(document.createElement('div'));
     variant.classList.add('variant');
-    variant.innerHTML = 'Послушайте плеер.<br>Выберите птицу из списка.';
+    if(language === 'ru') variant.innerHTML = 'Послушайте плеер.<br>Выберите птицу из списка.';
+    if(language === 'en') variant.innerHTML = 'Listen to the player.<br>Select a bird from the list.';
 
     const answers = answersBlock.appendChild(document.createElement('ul'));
     answers.classList.add('answers');
@@ -82,7 +90,7 @@ export function getLevel() {
     const answerTextArr = document.querySelectorAll('.answer-text');
     const answerLiArr = document.querySelectorAll('.answer');
     for (let i = 0; i < answerTextArr.length; i++) {
-        answerTextArr[i].textContent = birdsData[level][i].name;
+        answerTextArr[i].textContent = arr[level][i].name;
         answerLiArr[i].addEventListener('click', checkAnswer);
     }
 }

@@ -1,3 +1,5 @@
+import {getMainIndex} from "./getMainIndex.js";
+
 export function getHeader(linkClass) {
     const header = document.querySelector('header');
     header.classList.add('header');
@@ -33,9 +35,51 @@ export function getHeader(linkClass) {
     galleryLink.href = './gallery.html';
     galleryLink.textContent = 'Галерея';
 
+    const languageBlock = headerNav.appendChild(document.createElement('div'));
+    languageBlock.classList.add('header-link');
+    languageBlock.classList.add('language');
+
+    const russian = languageBlock.appendChild(document.createElement('span'));
+    russian.classList.add('header-link');
+    russian.classList.add('russian');
+    russian.classList.add('inactive-link');
+    russian.textContent = 'RU';
+    russian.addEventListener('click', function() {
+        russian.classList.add('inactive-link');
+        english.classList.remove('inactive-link');
+        headerLink.textContent = 'О проекте';
+        quizLink.textContent = 'Викторина';
+        galleryLink.textContent = 'Галерея';
+        const main = document.querySelector('main');
+        main.innerHTML = '';
+        getMainIndex();
+    });
+
+    const slash = languageBlock.appendChild(document.createElement('span'));
+    slash.textContent = '|';
+
+    const english = languageBlock.appendChild(document.createElement('span'));
+    english.classList.add('header-link');
+    english.classList.add('english');
+    english.textContent = 'EN';
+    english.addEventListener('click', function() {
+        english.classList.add('inactive-link');
+        russian.classList.remove('inactive-link');
+        headerLink.textContent = 'About';
+        quizLink.textContent = 'Quiz';
+        galleryLink.textContent = 'Gallery';
+        const main = document.querySelector('main');
+        main.innerHTML = '';
+        getMainIndex();
+    });
+
     if(linkClass) {
         const inactiveLink = document.querySelector(`.${linkClass}`);
         inactiveLink.classList.add('inactive-link');
         inactiveLink.href = '#';
+    }
+
+    if(!linkClass || linkClass === 'gallery-link' || linkClass === 'quiz-link') {
+        languageBlock.classList.add('hidden');
     }
 }

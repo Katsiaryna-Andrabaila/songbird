@@ -726,6 +726,10 @@ body {
   color: #fc8719;
 }
 
+.header-nav {
+  display: flex;
+}
+
 .header-link {
   font-family: "Playfair Display";
   font-weight: 700;
@@ -738,6 +742,20 @@ body {
 
 .header-link:hover {
   text-shadow: 1px 1px 2px rgb(239, 198, 198), 0 0 1em rgb(198, 198, 242), 0 0 0.2em rgb(198, 198, 204);
+}
+
+.language-block:hover {
+  text-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.russian,
+.english {
+  font-style: normal;
+  cursor: pointer;
 }
 
 .inactive-link:hover {

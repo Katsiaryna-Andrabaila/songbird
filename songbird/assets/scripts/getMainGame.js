@@ -1,9 +1,13 @@
+import {getLanguage} from "./getLanguage.js";
 import { getPlayer } from "./getPlayer.js";
 import birdsData from "./birdsData.js";
+import birdsDataEN from "./birdsDataEN.js";
 import {getMixedCategory} from "./getMixedCategory.js";
 import {checkAnswer} from "./checkAnswer.js";
 
 export function getMainGame() {
+    const language = getLanguage();
+
     const main = document.querySelector('main');
     main.classList.add('main-game');
     main.innerHTML = '';
@@ -18,13 +22,16 @@ export function getMainGame() {
 
     const score = main.appendChild(document.createElement('div'));
     score.classList.add('score');
-    score.textContent = 'Очки: 0';
+    if(language === 'ru') score.textContent = 'Очки: 0';
+    if(language === 'en') score.textContent = 'Score 0';
     score.dataset.answerScore = '5';
 
     const questionCategory = main.appendChild(document.createElement('nav'));
     questionCategory.classList.add('question-category');
 
-    const questions = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
+    let questions;
+    if(language === 'ru') questions = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
+    if(language === 'en') questions = ['Warm-up', 'Passerines', 'Forest Birds', 'Songbirds', 'Birds of Prey', 'Sea Birds'];
 
     for (let i = 0; i < questions.length; i++) {
         questionCategory.appendChild(document.createElement('li'));
@@ -65,9 +72,17 @@ export function getMainGame() {
     audio.classList.add('audio');
 
     let playList = [];
-    for (let i = 0; i < birdsData[level].length; i++) {
-        playList.push(birdsData[level][i].audio);
+    if(language === 'ru') {
+        for (let i = 0; i < birdsData[level].length; i++) {
+            playList.push(birdsData[level][i].audio);
+        }
     }
+    if(language === 'en') {
+        for (let i = 0; i < birdsDataEN[level].length; i++) {
+            playList.push(birdsDataEN[level][i].audio);
+        }
+    }
+    
     getMixedCategory(playList);
     audio.src = playList[0];
     audio.currentTime = 0;
@@ -79,7 +94,8 @@ export function getMainGame() {
 
     const variant = answersBlock.appendChild(document.createElement('div'));
     variant.classList.add('variant');
-    variant.innerHTML = 'Послушайте плеер.<br>Выберите птицу из списка.';
+    if(language === 'ru') variant.innerHTML = 'Послушайте плеер.<br>Выберите птицу из списка.';
+    if(language === 'en') variant.innerHTML = 'Listen to the player.<br>Select a bird from the list.';
 
     const answers = answersBlock.appendChild(document.createElement('ul'));
     answers.classList.add('answers');
@@ -93,7 +109,8 @@ export function getMainGame() {
     const answerTextArr = document.querySelectorAll('.answer-text');
     const answerLiArr = document.querySelectorAll('.answer');
     for (let i = 0; i < answerTextArr.length; i++) {
-        answerTextArr[i].textContent = birdsData[level][i].name;
+        if(language === 'ru') answerTextArr[i].textContent = birdsData[level][i].name;
+        if(language === 'en') answerTextArr[i].textContent = birdsDataEN[level][i].name;
         answerLiArr[i].addEventListener('click', checkAnswer);
     }
 
@@ -103,5 +120,6 @@ export function getMainGame() {
 
     const nextBtn = nextBtnLink.appendChild(document.createElement('button'));
     nextBtn.classList.add('next-button');
-    nextBtn.textContent = 'Следующий вопрос';
+    if(language === 'ru') nextBtn.textContent = 'Следующий вопрос';
+    if(language === 'en') nextBtn.textContent = 'Next question';
 }
