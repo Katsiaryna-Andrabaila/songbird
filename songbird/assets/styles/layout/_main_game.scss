@@ -24,7 +24,7 @@
     justify-content: space-around;
     width: 100%;
     background-color: #0078c9;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
 }
 
@@ -44,8 +44,8 @@
     width: 100%;
     background-color: #0078c9;
     border-radius: 10px;
-    padding: 10px 50px;
-    margin: 10px 0;
+    padding: 5px 50px;
+    margin: 5px 0;
 }
 
 .card {
@@ -63,8 +63,8 @@
 }
 
 .bird-shadow {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     background-color: #025389;
     border-radius: 10px;
@@ -95,15 +95,15 @@
 }
 
 .bird-description {
-    font-weight: 14px;
-    margin: 10px 0;
+    font-size: 20px;
+    margin: 10px 0 0 0;
 }
 
 .answers-block {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 330px;
+    height: 280px;
     margin-bottom: 5px;
 }
 
@@ -152,13 +152,13 @@
 
 .variant {
     font-size: 24px;
-    padding: 10px;
+    padding: 5px;
 }
 
 @media (max-width: 1699px) {
 
     .main-game {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .score {
@@ -166,16 +166,16 @@
     }
 
     .bird-shadow {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
 
     .bird-playing {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .answers-block {
-        height: 300px;
+        height: 280px;
     }
 
     .card-picture {
@@ -188,7 +188,7 @@
     }
 
     .bird-description {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .answer-sign {
