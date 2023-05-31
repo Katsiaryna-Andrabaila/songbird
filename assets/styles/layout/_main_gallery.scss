@@ -1,0 +1,17 @@
+.gallery-cards {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    justify-items: center;
+    margin: 70px auto;
+    background-color: #cee4f3;
+    padding: 15px;
+    gap: 20px;
+}
+
+@media (max-width: 1120px) {
+    .gallery-cards {
+        width: 95%;
+    }
+}

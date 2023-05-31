@@ -1,0 +1,385 @@
+.main-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 92%;
+    height: 100vh;
+    margin: 100px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: #f0f8ff;
+}
+
+.score {
+    font-size: 28px;
+    text-align: right;
+    font-weight: 600;
+    color: #014675;
+    margin-right: 20px;
+}
+
+.question-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #0078c9;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.category {
+    text-align: center;
+    font-weight: 300;
+    list-style: none;
+}
+
+.active-category {
+    color: #fc8719;
+    font-weight: 600;
+}
+
+.player-block {
+    display: flex;
+    width: 100%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    padding: 5px 50px;
+    margin: 5px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-block {
+    display: flex;
+    width: 100%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.bird-shadow {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    background-color: #025389;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.card-picture {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.player-block-right {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 0;
+    margin: 0;
+}
+
+.bird-playing {
+    font-size: 30px;
+    margin: 0;
+}
+
+.bird-species {
+    margin: 5px 0;
+}
+
+.bird-description {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.answers-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 280px;
+    margin-bottom: 5px;
+}
+
+.answers,
+.variant {
+    width: 49.5%;
+    background-color: #0078c9;
+    border-radius: 10px;
+    margin: 0;
+    border: 1px solid #f0f8ff;
+    padding: 0;
+}
+
+.answer {
+    display: flex;
+    width: 100%;
+    height: 16.67%;
+    border: 0.5px dotted #f0f8ff;
+    list-style-type: none;
+    cursor: pointer;
+}
+.answer:hover {
+    text-shadow: 1px 1px 2px rgb(239, 198, 198), 0 0 1em rgb(198, 198, 242), 0 0 0.2em rgb(198, 198, 204);
+}
+
+.answer-sign {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #025389;
+    margin: 20px;
+}
+
+.wrong {
+    background-color: #c70707;
+}
+
+.correct {
+    background-color: #07b810;
+}
+
+.answer-text {
+    margin-top: 8px;
+}
+
+.variant {
+    font-size: 24px;
+    padding: 5px;
+}
+
+@media (max-width: 1699px) {
+
+    .main-game {
+        font-size: 20px;
+    }
+
+    .score {
+        font-size: 24px;
+    }
+
+    .bird-shadow {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bird-playing {
+        font-size: 22px;
+    }
+
+    .answers-block {
+        height: 280px;
+    }
+
+    .card-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bird-species {
+        font-size: 20px;
+    }
+
+    .bird-description {
+        font-size: 18px;
+    }
+
+    .answer-sign {
+        width: 10px;
+        height: 10px;
+        margin: 15px;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .main-game {
+        font-size: 18px;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+
+    .bird-shadow {
+        width: 170px;
+        height: 170px;
+    }
+
+    .bird-playing {
+        font-size: 20px;
+    }
+
+    .answers-block {
+        height: 260px;
+    }
+
+    .variant {
+        font-size: 18px;
+    }
+
+    .card-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bird-species {
+        font-size: 18px;
+    }
+
+    .bird-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .main-game {
+        font-size: 16px;
+    }
+
+    .score {
+        font-size: 16px;
+    }
+
+    .bird-shadow {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bird-playing {
+        font-size: 16px;
+    }
+
+    .answers-block {
+        height: 200px;
+    }
+
+    .variant {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .card-picture {
+        width: 110px;
+        height: 110px;
+    }
+
+    .bird-species {
+        font-size: 14px;
+    }
+
+    .bird-description {
+        font-size: 14px;
+        margin-top: 3px;
+        overflow: hidden;
+    }
+
+    .bird-description:hover {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .main-game {
+        width: 98%;
+        font-size: 14px;
+        margin: 60px 10px;
+    }
+
+    .score {
+        font-size: 14px;
+    }
+
+    .bird-shadow {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bird-playing {
+        font-size: 14px;
+    }
+
+    .player-block {
+        padding: 10px;
+    }
+
+    .answers-block {
+        height: 200px;
+    }
+
+    .variant {
+        padding: 5px;
+    }
+
+    .card-picture {
+        width: 110px;
+        height: 110px;
+    }
+
+    .bird-shadow {
+        margin-right: 10px;
+    }
+
+    .card-picture {
+        margin-right: 2px;
+    }
+
+    .bird-species {
+        font-size: 14px;
+    }
+
+    .bird-description {
+        font-size: 14px;
+        margin-top: 3px;
+        overflow: hidden;
+    }
+
+    .bird-description:hover {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main-game {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .category {
+        overflow: hidden;
+        font-weight: 100;
+        word-wrap: break-word;
+    }
+
+    .active-category {
+        font-weight: 100;
+    }
+
+    .bird-shadow {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-picture {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-controls {
+        margin-left: -50px;
+    }
+
+    .bird-description {
+        word-wrap: break-word;
+    }
+}

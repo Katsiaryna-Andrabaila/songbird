@@ -1,0 +1,30 @@
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+@import
+  'base/reset',
+  'base/fonts',
+  'base/typography';
+
+@import
+  'layout/body',
+  'layout/navigation',
+  'layout/main_index',
+  'layout/main_game',
+  'layout/main_results',
+  'layout/main_gallery',
+  'layout/header',
+  'layout/footer';
+
+@import
+  'components/buttons',
+  'components/player';
+
+@import
+  'pages/main',
+  'pages/game',
+  'pages/results',
+  'pages/gallery';

@@ -1,0 +1,296 @@
+.info-block-button,
+.gallery-button,
+.next-button,
+.again-button {
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #034e4e;
+    border: 1px solid #034e4e;
+    border-bottom: 4px solid #034e4e;
+    border-radius: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#96cece));
+    background: gradient(top,  #dee5e6,  #96cece);
+    box-shadow: inset 1px 1px 0 #034e4e;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.gallery-button {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid #487fe3;
+    border-bottom: 4px solid #487fe3;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 0 #487fe3;
+    top: 10px;
+    right: 15px;
+}
+
+.info-block-button:hover,
+.gallery-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
+    background: gradient(top,  #96cece,  #dee5e6);
+}
+
+.info-block-button:active,
+.gallery-button:active {
+    border: none;
+    bottom: -4px;
+}
+
+.next-button {
+    width: 100%;
+    border: 1px solid #0078c9;
+    border-bottom: 4px solid #0078c9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#0078c9));
+    background: gradient(top,  #dee5e6,  #0078c9);
+    box-shadow: inset 1px 1px 0 #0078c9;
+    color: #b9bbbc;
+    cursor: default;
+    margin: 0;
+}
+
+.next-active {
+    color: #014675;
+    cursor: pointer;
+}
+
+.next-active:hover,
+.again-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#96cece), to(#dee5e6));
+    background: gradient(top,  #96cece,  #dee5e6);
+}
+
+.next-active:active,
+.again-button:active {
+    border: none;
+    bottom: -4px;
+}
+
+.player-button {
+    width: 64px;
+    height: 64px;
+    background: url(../../assets/icons/play.svg);
+    margin: 25px 10px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player-button:hover {
+    background-color: #5894ee;
+}
+
+.pause {
+    background: url(../../assets/icons/pause.svg);
+}
+
+.sound-button {
+    width: 32px;
+    height: 32px;
+    background: url(../../assets/icons/sound-on-icon.svg);
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.sound-button:hover {
+    background-color: #5894ee;
+}
+
+.sound-off {
+    background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.card-player-button {
+    width: 64px;
+    height: 64px;
+    background: url(../../assets/icons/play.svg);
+    margin: 25px 10px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card-player-button:hover {
+    background-color: #5894ee;
+}
+
+.card-pause {
+    background: url(../../assets/icons/pause.svg);
+}
+
+.card-sound-button {
+    width: 32px;
+    height: 32px;
+    background: url(../../assets/icons/sound-on-icon.svg);
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.card-sound-button:hover {
+    background-color: #5894ee;
+}
+
+.card-sound-off {
+    background: url(../../assets/icons/sound-off-icon.svg);
+}
+
+.again-button {
+    width: 100%;
+    border: 1px solid #0078c9;
+    border-bottom: 4px solid #0078c9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dee5e6), to(#0078c9));
+    background: gradient(top,  #dee5e6,  #0078c9);
+    box-shadow: inset 1px 1px 0 #0078c9;
+    color: #014675;
+    cursor: pointer;
+    margin: 40px 0 0 0;
+    padding: 5px;
+    font-size: 24px;
+}
+
+@media (max-width: 1300px) {
+
+    .card-player-button {
+        background: url(../../assets/icons/play-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .info-block-button,
+    .next-button,
+    .again-button {
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .player-button {
+        background: url(../../assets/icons/play-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    .pause {
+        background: url(../../assets/icons/pause-middle.svg);
+        width: 44px;
+        height: 44px;
+    }
+
+    .gallery-button {
+        width: 160px;
+        height: 160px;
+        top: 10px;
+        right: 15px;
+        font-size: 14px;
+    }
+
+    .next-button {
+        width: 100%;
+    }
+
+    .card-player-button {
+        background: url(../../assets/icons/play-small.svg);
+        width: 34px;
+        height: 34px;
+        margin: 10px 5px 0 0;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-small.svg);
+        width: 34px;
+        height: 34px;
+    }
+
+    .card-sound-button {
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/icons/sound-on16-my.svg);
+        margin: 0;
+    }
+    
+    .card-sound-off {
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/icons/sound-off16.svg);
+    }
+
+    .again-button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .info-block-button,
+    .next-button,
+    .again-button {
+        width: 100px;
+        height: 25px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .player-button {
+        margin-right: 0;
+    }
+
+    .sound-button {
+        margin: 0;
+    }
+
+    .card-sound-button {
+        margin: 0;
+    }
+
+    .card-player-button {
+        background: url(../../assets/icons/play-small2.svg);
+        width: 20px;
+        height: 20px;
+        margin: 15px 2px 0 5px;
+    }
+
+    .card-pause {
+        background: url(../../assets/icons/pause-small2.svg);
+        width: 20px;
+        height: 20px;
+    }
+
+    .next-button,
+    .again-button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .player-button {
+        background: url(../../assets/icons/play-small.svg);
+        width: 34px;
+        height: 34px;
+        margin-top: 30px;
+    }
+
+    .pause {
+        background: url(../../assets/icons/pause-small.svg);
+        width: 34px;
+        height: 34px;
+    }
+}

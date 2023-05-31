@@ -1,0 +1,120 @@
+.controls {
+    display: flex;
+}
+
+.player-sound-bar-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    gap: 5px;
+}
+
+.sound-controls {
+    text-align: right;
+}
+
+.sound-bar,
+.player-bar {
+    -webkit-appearance: none;
+    border: 1px solid #025389;
+	height: 5px;
+    background-color: #025389;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sound-bar::-webkit-slider-thumb,
+.player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fc8719;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.sound-bar {
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.player-bar {
+    width: 100%;
+}
+
+.player-timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.card-sound-bar,
+.card-player-bar {
+    -webkit-appearance: none;
+    border: 1px solid #025389;
+	height: 5px;
+    background-color: #025389;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.card-sound-bar::-webkit-slider-thumb,
+.card-player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fc8719;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.card-sound-bar {
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.card-player-bar {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .card-sound-bar,
+    .card-player-bar {
+	    height: 2px;
+        border-radius: 2px;
+        margin: 0;
+    }
+
+    .card-sound-bar::-webkit-slider-thumb,
+    .card-player-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .card-sound-bar {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .sound-bar,
+    .player-bar {
+	    height: 3px;
+        border-radius: 2px;
+    }
+
+    .sound-bar::-webkit-slider-thumb,
+    .player-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}
